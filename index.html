@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Development</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-headers">
+            <h1 class="title">Development</h1>
+            <h2>Conducting Competitive Analysis Between Companies and Creating a Reactive Framework for Frontend Development
+            </h2>
+        </div>
+        <div class="responsive-pic">
+            <img src="assets/react.png" alt="Picture of React.js logo">
+        </div>
+        <hr class="horizontal-line">
+        <h1>Assignment Overview</h1>
+        <p>The main purpose of this assignment are to practice conducting competitive analyses between competitor companies in order to learn how to idenfiy strengths and weaknesses in design eleemnts used by industry designers. Additionally, in order to
+            put these skills into effect, I created a function aggregator interface using React to practice using a reactive framework for frontend development.</p>
+        <hr class="horizontal-line">
+        <h1>Part 1: Competitive Analysis</h1>
+        <p>For the first part of this project, I conducted a competitive analysis, which is a method to understand and get a basis for how other organizations are designing their products or interfaces. To do this, I selected 3 different websites with a
+            favoriting function. They were
+            <ol>
+                <li><b>EdStem: </b>
+                    <a href="https://edstem.org/">Link to EdStem</a>
+                </li>
+                <li><b>YouTube: </b>
+                    <a href="https://www.youtube.com/">Link to YouTube</a>
+                </li>
+                <li><b>Spotify Web Player: </b>
+                    <a href="https://open.spotify.com/">Link to Spotify</a>
+                </li>
+            </ol>
+            <h2>Competitive Comparison Table</h2>
+            <p>I analyzed at how they organize information that is relevant to the users' needs and how they utilized aggregators to keep track of different items. For each website, I observed how information is sorted and filtered in their favoriting functions
+                and how these design decisions affected the user. These discoveries are captured in a competitive comparison chart shown below:</p>
+        </p>
+        <table>
+            <tr>
+                <th></th>
+                <th>EdStem</th>
+                <th>YouTube</th>
+                <th>Spotify</th>
+            </tr>
+            <tr>
+                <td><b>Different View Modes (i.e. grid, list, etc.)</b></td>
+                <td>&#x2717;</td>
+                <td>&#x2717;</td>
+                <td>&#x2713;</td>
+            </tr>
+            <tr>
+                <td><b>Sorting by Date Added</b></td>
+                <td>&#x2717;</td>
+                <td>&#x2713;</td>
+                <td>&#x2713; (for mobile) &#x2717; (for website)</td>
+            </tr>
+            <tr>
+                <td><b>Easy to Remove from Favorites List</b></td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+            </tr>
+            <tr>
+                <td><b>Option to View List when Item is Added</b></td>
+                <td>&#x2717;</td>
+                <td>&#x2713;</td>
+                <td>&#x2717;</td>
+            </tr>
+            <tr>
+                <td><b>View Quantity of Items in List</b></td>
+                <td>&#x2717;</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+            </tr>
+            <tr>
+                <td><b>Filter Items in List</b></td>
+                <td>&#x2717;</td>
+                <td>&#x2717;</td>
+                <td>&#x2717;</td>
+            </tr>
+        </table>
+        <h2>Competitive Analysis Summary</h2>
+        <p>To begin, I think that EdStem's favoriting platform was the least well-designed in terms of number of features and usability. In total, EdStem just gave users the ability to "star" posts that they deemed important or to look at later. However,
+            there was no way to organize these starred posts or filter them in any way (i.e. by keyword). Spotify's web player and YouTube were very similar in terms of the features and usability of their favoriting features. All of them had the capability
+            to view the number of items in the list, remove items from the list easily, and sort by date added (Spotify was able to do this on the app, not the website however). In the end, what made YouTube slightly better designed was that it allowed
+            the user to immediately view the list after the item was added while in Spotify, you had to manually navigate to the Liked Songs playlist in order to do this.</p>
+        <h2>List of Features to be Implemented in React Website</h2>
+        <p>After performing the competitive analysis, I definitely want to implement the ability to sort and filter items in my list, as I believe that that will make it easier for the user to locate items within the list, especially if there are a lots
+            of items. I also want to create separate pages for the available items and the items to be added and have a feature that allows the user to quickly and easily view the items in the list/cart once they add one. The last feature that I believe
+            is core to a well-designed and usable aggregator website is the ability for the user to easily remove items from their list and receiving confirmation that they have done so successfully.</p>
+
+        <hr class="horizontal-line">
+        <h1>Part 2: Functionality and List/Aggregator Interface</h1>
+        <h2>Overview</h2>
+        <p>For this part of the assignment, I created a list-based interface/website using HTML, CSS, and React/JavaScript. The theme that my website revolves around is the European soccer transfer market, which incorporates both lists (to be used for filtering,
+            sorting, and resetting) and an aggregator (adding players to a team that you create). </p>
+        <h3>Intention of the App</h3>
+        <p>The intention of the app is to simulate the actions of a soccer managaer in the transfer window. The <em>transfer window</em> is a period of time during the soccer season in which managers and clubs have the ability to buy players to add to their
+            team. Each player in the market has an associated <em>transfer value</em> that represents how expensive they would be to add to your team.</p>
+        <h3>How this Website Uses Filtering, Sorting, and Aggregation</h3>
+        <ul>
+            <li><b>Filtering: </b></li>
+            <p>This website uses filtering because each player has a position (i.e. striker, left winger, etc.) and the user can filter the available players by their position. For example, if I am the manager of a club and I am specifically looking to add
+                strikers to my team, I can filter the available players to only display strikers.</p>
+            <li><b>Sorting: </b></li>
+            <p>Sorting is incorporated into the website because managers are able to sort the market by price, allowing them to view the least expensive to most expensive players and vice versa.</p>
+            <li><b>Aggregating: </b></li>
+            <p>Lastly, managers can aggregate players together into their team, which is shown at the bottom of the page. Each player that they purchase is added to their team and they can see those players along with the total amount of spending needed
+                to purchase all of them.</p>
+        </ul>
+        <h3>How to Use/Interpret the Website</h3>
+        <p>Upon opening the iterface, you will see a grid of cards on the screen. Each card represents a player that is available to be bought on the market. The following list details the some of the important information displayed on each card:</p>
+        <ul>
+            <li><b>Position </b>
+                <p>(ST = Striker, LW = Left Winger, RW = Right Winger, CAM = Central Attacking Midfielder, CM = Central Midfielder, CDM = Central Defensive Midfielder, RB = Right Back, CB = Center Back, LB = Left Back, GK = Goalkeeper)</p>
+            </li>
+            <li><b>Club </b>
+                <p>(the badge above the flag represents the club team that the player is currently on)</p>
+            </li>
+            <li><b>Nationality </b>
+                <p>(the flag represents the player's nationality)</p>
+            </li>
+        </ul>
+
+        <h3>Website Link</h3>
+        <p>The website can be found at the following link: <a href="">European Soccer Transfer Market</a></p>
+
+
+
+        <hr class="horizontal-line">
+        <h1>Conclusion:</h1>
+        <p>In the end, this project was a great way for me to learn more about utilizing important, industry-standard design practices to build an interactive interface, use interactive components, and learn how to tie these components to an internal data
+            state. I was able to get more comfortable using React by creating the website. Lastly, I was able to better understand the competitive landscape within which multiple products exists and analyze various features of these products, helping
+            me gain insight into what works well in the industry and what doesn't.</p>
+    </div>
+</body>
+
+</html>
